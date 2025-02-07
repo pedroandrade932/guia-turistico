@@ -7,8 +7,35 @@
 <body>
     <h1>Guia Turístico da Paraíba</h1>
 
+    <h2>Criar Local</h2>
+    <form id="formulario-criacao">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea><br><br>
+
+        <label for="foto">Link da Foto:</label>
+        <input type="url" id="foto" name="foto" required><br><br>
+
+        <button type="button" onclick="criarLocal()">Criar</button>
+    </form>
+
+    <h2>Editar Local</h2>
+    <form id="formulario-edicao">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea><br><br>
+
+        <label for="foto">Link da Foto:</label>
+        <input type="url" id="foto" name="foto" required><br><br>
+    </form>
+
+    <h2>Locais</h2>
     <div id="locais">
-        </div>
+    </div>
 
     <script src="_scripts/script.js"></script>
 </body>
