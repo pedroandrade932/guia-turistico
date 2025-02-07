@@ -57,6 +57,7 @@ function criarLocal() {
 
     // Criar objeto com os dados do local
     const novoLocal = {
+        id: 11,
         titulo: titulo,
         descricao: descricao,
         foto: foto
@@ -73,7 +74,7 @@ function criarLocal() {
         .then(response => response.json())
         .then(local => {
             // Atualizar a lista de locais
-            buscarLocais()
+            window.open("index.html")
         })
 }
 
