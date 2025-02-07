@@ -1,40 +1,62 @@
+window.onload = function(){
+    fetch('http://localhost:3000/locais.json')
+    .then(response => response.json())
+    .then(locais => {
+        const locaisDiv = document.getElementById('locais')
+        locaisDiv.innerHTML = '' // Limpa a lista de locais
+
+        locais.forEach(local => {
+            const localDiv = document.createElement('div')
+            localDiv.classList.add('local')
+            localDiv.innerHTML = `
+                <h2>${local.titulo}</h2>
+                <img src="${local.foto}" alt="${local.titulo}">
+                <p>${local.descricao}</p>
+                <button onclick="editarLocal(${local.id})">Editar</button>
+                <button onclick="excluirLocal(${local.id})">Excluir</button>
+            `
+            locaisDiv.appendChild(localDiv)
+        })
+    })
+}
+
 function buscarLocais() {
-    fetch('http://localhost:3000/locais')
+    fetch('http://localhost:3000/locais.json')
         .then(response => response.json())
         .then(locais => {
-            const locaisDiv = document.getElementById('locais');
-            locaisDiv.innerHTML = ''; // Limpa a lista de locais
+            const locaisDiv = document.getElementById('locais')
+            locaisDiv.innerHTML = '' // Limpa a lista de locais
 
             locais.forEach(local => {
-                const localDiv = document.createElement('div');
-                localDiv.classList.add('local');
+                const localDiv = document.createElement('div')
+                localDiv.classList.add('local')
                 localDiv.innerHTML = `
                     <h2>${local.titulo}</h2>
                     <img src="${local.foto}" alt="${local.titulo}">
                     <p>${local.descricao}</p>
                     <button onclick="editarLocal(${local.id})">Editar</button>
                     <button onclick="excluirLocal(${local.id})">Excluir</button>
-                `;
-                locaisDiv.appendChild(localDiv);
-            });
-        });
+                `
+                locaisDiv.appendChild(localDiv)
+            })
+        })
 }
 
 function criarLocal() {
     // Obter dados do formulário de criação de local
-    const titulo = document.getElementById('titulo').value;
-    const descricao = document.getElementById('descricao').value;
-    const foto = document.getElementById('foto').value;
+    const titulo = document.getElementById('titulo').value
+    const descricao = document.getElementById('descricao').value
+    const foto = document.getElementById('foto').value
 
     // Criar objeto com os dados do local
     const novoLocal = {
         titulo: titulo,
         descricao: descricao,
         foto: foto
-    };
+    }
 
     // Enviar requisição POST para criar o local
-    fetch('http://localhost:3000/locais', {
+    fetch('http://localhost:3000/locais.json', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -44,40 +66,40 @@ function criarLocal() {
         .then(response => response.json())
         .then(local => {
             // Atualizar a lista de locais
-            buscarLocais();
-        });
+            buscarLocais()
+        })
 }
 
 function editarLocal(id) {
     // Obter dados do local a ser editado
-    fetch(`http://localhost:3000/locais/${id}`)
+    fetch(`http://localhost:3000/locais.json/${id}`)
         .then(response => response.json())
         .then(local => {
             // Preencher formulário de edição com os dados do local
-            document.getElementById('titulo').value = local.titulo;
-            document.getElementById('descricao').value = local.descricao;
-            document.getElementById('foto').value = local.foto;
+            document.getElementById('titulo').value = local.titulo
+            document.getElementById('descricao').value = local.descricao
+            document.getElementById('foto').value = local.foto
 
             // Adicionar botão de salvar edição
-            const salvarButton = document.createElement('button');
-            salvarButton.textContent = 'Salvar Edição';
-            salvarButton.onclick = () => salvarEdicao(id);
-            document.getElementById('formulario-edicao').appendChild(salvarButton);
-        });
+            const salvarButton = document.createElement('button')
+            salvarButton.textContent = 'Salvar Edição'
+            salvarButton.onclick = () => salvarEdicao(id)
+            document.getElementById('formulario-edicao').appendChild(salvarButton)
+        })
 }
 
 function salvarEdicao(id) {
     // Obter dados do formulário de edição
-    const titulo = document.getElementById('titulo').value;
-    const descricao = document.getElementById('descricao').value;
-    const foto = document.getElementById('foto').value;
+    const titulo = document.getElementById('titulo').value
+    const descricao = document.getElementById('descricao').value
+    const foto = document.getElementById('foto').value
 
     // Criar objeto com os dados do local
     const localAtualizado = {
         titulo: titulo,
         descricao: descricao,
         foto: foto
-    };
+    }
 
     // Enviar requisição PUT para atualizar o local
     fetch(`http://localhost:3000/locais/${id}`, {
@@ -90,8 +112,8 @@ function salvarEdicao(id) {
         .then(response => response.json())
         .then(local => {
             // Atualizar a lista de locais
-            buscarLocais();
-        });
+            buscarLocais()
+        })
 }
 
 function excluirLocal(id) {
@@ -101,6 +123,6 @@ function excluirLocal(id) {
     })
         .then(response => {
             // Atualizar a lista de locais
-            buscarLocais();
-        });
+            buscarLocais()
+        })
 }
