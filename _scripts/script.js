@@ -1,9 +1,5 @@
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-
 window.onload = function(){
-        fetch('http://localhost:5500/locais.json')
+        fetch('http://localhost:3000/locais')
         .then(response => response.json())
         .then(locais => {
             const locaisDiv = document.getElementById('locais')
@@ -28,7 +24,7 @@ window.onload = function(){
 
 function buscarLocais() {
     let search = document.getElementById("busca").value
-    fetch('http://localhost:5500/locais.json')
+    fetch('http://localhost:3000/locais')
         .then(response => response.json())
         .then(locais => {
             let locaisDiv = document.getElementById('locais')
@@ -58,32 +54,18 @@ function criarLocal() {
     const titulo = document.getElementById('titulo').value
     const descricao = document.getElementById('descricao').value
     const foto = document.getElementById('foto').value
-    let num_id = 0
-    
-    fetch('http://localhost:5500/locais.json')
-    .then(response => response.json())
-    .then(locais => {
-        let locaisDiv = document.getElementById('locais')
-        locaisDiv.innerHTML = '' // Limpa a lista de locais
 
-        locais.forEach(local => {
-            num_id = getRandomInt(9999)
-            if(num_id = local.id){
-                num_id = getRandomInt(999)
-            }
-        })})
 
 
     // Criar objeto com os dados do local
     const novoLocal = {
-        id: num_id,
         titulo: titulo,
         descricao: descricao,
         foto: foto
     }
 
     // Enviar requisição POST para criar o local
-    fetch('http://localhost:5500/locais.json', {
+    fetch('http://localhost:3000/locais', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -91,15 +73,12 @@ function criarLocal() {
         body: JSON.stringify(novoLocal)
     })
         .then(response => response.json())
-        .then(local => {
-            // Atualizar a lista de locais
-            window.open("index.html")
-        })
+        //window.open("index.html")
 }
 
 function editarLocal(id) {
     // Obter dados do local a ser editado
-    fetch(`http://localhost:5500/locais.json/${id}`)
+    fetch(`http://localhost:3000/locais?id=${id}`)
         .then(response => response.json())
         .then(local => {
             // Preencher formulário de edição com os dados do local

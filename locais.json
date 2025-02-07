@@ -1,62 +1,64 @@
-[
+{
+  "locais": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Praia de Tambaú",
       "descricao": "Uma das praias urbanas mais famosas do Brasil, com águas calmas e paisagens deslumbrantes.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Praia_de_Tamba%C3%BA_Jo%C3%A3o_Pessoa.jpg/800px-Praia_de_Tamba%C3%BA_Jo%C3%A3o_Pessoa.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "Centro Histórico de João Pessoa",
       "descricao": "Um conjunto arquitetônico colonial preservado, com igrejas, casarões e museus que contam a história da cidade.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Igreja_de_S%C3%A3o_Francisco_Jo%C3%A3o_Pessoa_Para%C3%ADba_Brasil.jpg/800px-Igreja_de_S%C3%A3o_Francisco_Jo%C3%A3o_Pessoa_Para%C3%ADba_Brasil.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "Estação Cabo Branco",
       "descricao": "Um espaço cultural projetado por Oscar Niemeyer, com exposições de arte, ciência e tecnologia, além de uma vista panorâmica da cidade.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Estacao_Cabo_Branco.jpg/800px-Estacao_Cabo_Branco.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "titulo": "Praia do Jacaré",
       "descricao": "Famosa pelo pôr do sol ao som do Bolero de Ravel, com passeios de barco e restaurantes à beira-mar.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Por_do_Sol_na_Praia_do_Jacar%C3%A9.jpg/800px-Por_do_Sol_na_Praia_do_Jacar%C3%A9.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "titulo": "Santuário de Nossa Senhora da Penha",
       "descricao": "Um local de peregrinação religiosa com vista para o mar e uma igreja histórica.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Santuario_da_Penha_Paraiba.JPG/800px-Santuario_da_Penha_Paraiba.JPG"
     },
-      {
-      "id": 6,
+    {
+      "id": "6",
       "titulo": "Farol do Cabo Branco",
       "descricao": "Localizado na Ponta do Seixas, o ponto mais oriental das Américas, com vista para o oceano Atlântico.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Farol_do_Cabo_Branco_Jo%C3%A3o_Pessoa.jpg/800px-Farol_do_Cabo_Branco_Jo%C3%A3o_Pessoa.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "titulo": "Praia de Coqueirinho",
       "descricao": "Uma praia paradisíaca com águas cristalinas, falésias coloridas e piscinas naturais.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Praia_de_Coqueirinho_Para%C3%ADba.jpg/800px-Praia_de_Coqueirinho_Para%C3%ADba.jpg"
     },
-      {
-      "id": 8,
+    {
+      "id": "8",
       "titulo": "Cânion do Funil",
       "descricao": "Um cânion com paredões de até 80 metros de altura, ideal para trilhas, rapel e passeios de barco.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/C%C3%A2nion_do_Funil_PB.jpg/800px-C%C3%A2nion_do_Funil_PB.jpg"
     },
-      {
-      "id": 9,
+    {
+      "id": "9",
       "titulo": "Pedra da Boca",
       "descricao": "Uma formação rochosa com pinturas rupestres e trilhas para caminhadas.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Pedra_da_Boca_Paraiba.JPG/800px-Pedra_da_Boca_Paraiba.JPG"
     },
-      {
-      "id": 10,
+    {
+      "id": "10",
       "titulo": "Serra da Borborema",
       "descricao": "Uma região montanhosa com clima ameno, paisagens exuberantes e cidades históricas.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Serra_da_Borborema_Paraiba.jpg/800px-Serra_da_Borborema_Paraiba.jpg"
     }
   ]
+}
