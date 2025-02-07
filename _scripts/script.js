@@ -1,27 +1,5 @@
 window.onload = function(){
-    fetch('http://localhost:3000/locais.json')
-    .then(response => response.json())
-    .then(locais => {
-        const locaisDiv = document.getElementById('locais')
-        locaisDiv.innerHTML = '' // Limpa a lista de locais
-
-        locais.forEach(local => {
-            const localDiv = document.createElement('div')
-            localDiv.classList.add('local')
-            localDiv.innerHTML = `
-                <h2>${local.titulo}</h2>
-                <img src="${local.foto}" alt="${local.titulo}">
-                <p>${local.descricao}</p>
-                <button onclick="editarLocal(${local.id})">Editar</button>
-                <button onclick="excluirLocal(${local.id})">Excluir</button>
-            `
-            locaisDiv.appendChild(localDiv)
-        })
-    })
-}
-
-function buscarLocais() {
-    fetch('http://localhost:3000/locais.json')
+        fetch('http://localhost:5500/locais.json')
         .then(response => response.json())
         .then(locais => {
             const locaisDiv = document.getElementById('locais')
@@ -34,10 +12,39 @@ function buscarLocais() {
                     <h2>${local.titulo}</h2>
                     <img src="${local.foto}" alt="${local.titulo}">
                     <p>${local.descricao}</p>
+                    <div class="btn-local">
                     <button onclick="editarLocal(${local.id})">Editar</button>
                     <button onclick="excluirLocal(${local.id})">Excluir</button>
+                    </div>
                 `
                 locaisDiv.appendChild(localDiv)
+            })
+        })
+}
+
+function buscarLocais() {
+    let search = document.getElementById("busca").value
+    fetch('http://localhost:5500/locais.json')
+        .then(response => response.json())
+        .then(locais => {
+            let locaisDiv = document.getElementById('locais')
+            locaisDiv.innerHTML = '' // Limpa a lista de locais
+
+            locais.forEach(local => {
+                if (local.titulo.includes(search)){
+                const localDiv = document.createElement('div')
+                localDiv.classList.add('local')
+                localDiv.innerHTML = `
+                    <h2>${local.titulo}</h2>
+                    <img src="${local.foto}" alt="${local.titulo}">
+                    <p>${local.descricao}</p>
+                    <div class="btn-local">
+                    <button onclick="editarLocal(${local.id})">Editar</button>
+                    <button onclick="excluirLocal(${local.id})">Excluir</button>
+                    </div>
+                `
+                locaisDiv.appendChild(localDiv)
+                }
             })
         })
 }
@@ -56,7 +63,7 @@ function criarLocal() {
     }
 
     // Enviar requisição POST para criar o local
-    fetch('http://localhost:3000/locais.json', {
+    fetch('http://localhost:5500/locais.json', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -72,7 +79,7 @@ function criarLocal() {
 
 function editarLocal(id) {
     // Obter dados do local a ser editado
-    fetch(`http://localhost:3000/locais.json/${id}`)
+    fetch(`http://localhost:5500/locais.json/${id}`)
         .then(response => response.json())
         .then(local => {
             // Preencher formulário de edição com os dados do local
@@ -102,7 +109,7 @@ function salvarEdicao(id) {
     }
 
     // Enviar requisição PUT para atualizar o local
-    fetch(`http://localhost:3000/locais/${id}`, {
+    fetch(`http://localhost:5500/locais/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -118,7 +125,7 @@ function salvarEdicao(id) {
 
 function excluirLocal(id) {
     // Enviar requisição DELETE para excluir o local
-    fetch(`http://localhost:3000/locais/${id}`, {
+    fetch(`http://localhost:5500/locais/${id}`, {
         method: 'DELETE'
     })
         .then(response => {

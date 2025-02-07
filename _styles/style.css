@@ -1,3 +1,10 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -67,6 +74,7 @@ button:hover {
     border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 900px;
 }
 
 .local img {
@@ -87,6 +95,10 @@ button:hover {
     color: #666;
 }
 
+.local .btn-local {
+    width: 250px;
+    margin: auto;
+}
 .local button {
     margin: 10px;
 }
