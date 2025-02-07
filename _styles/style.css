@@ -1,0 +1,14 @@
+/* Estilos para o guia turístico */
+#locais {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.local {
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+.local img {
+    max-width: 200px;
+}
