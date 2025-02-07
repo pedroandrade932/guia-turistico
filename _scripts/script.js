@@ -1,3 +1,7 @@
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 window.onload = function(){
         fetch('http://localhost:5500/locais.json')
         .then(response => response.json())
@@ -54,10 +58,25 @@ function criarLocal() {
     const titulo = document.getElementById('titulo').value
     const descricao = document.getElementById('descricao').value
     const foto = document.getElementById('foto').value
+    let num_id = 0
+    
+    fetch('http://localhost:5500/locais.json')
+    .then(response => response.json())
+    .then(locais => {
+        let locaisDiv = document.getElementById('locais')
+        locaisDiv.innerHTML = '' // Limpa a lista de locais
+
+        locais.forEach(local => {
+            num_id = getRandomInt(9999)
+            if(num_id = local.id){
+                num_id = getRandomInt(999)
+            }
+        })})
+
 
     // Criar objeto com os dados do local
     const novoLocal = {
-        id: 11,
+        id: num_id,
         titulo: titulo,
         descricao: descricao,
         foto: foto
