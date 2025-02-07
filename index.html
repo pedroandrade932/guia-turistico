@@ -1,37 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Turístico da Paraíba</title>
     <link rel="stylesheet" href="_styles/style.css">
 </head>
 <body>
     <h1>Guia Turístico da Paraíba</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="adicionar-locais.html">Adicionar Local</a></li>
+            <li><a href="editar-local.html">Editar Local</a></li>
+        </ul>
+    </nav>
 
-    <h2>Criar Local</h2>
-    <form id="formulario-criacao">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required><br><br>
-
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" name="descricao" required></textarea><br><br>
-
-        <label for="foto">Link da Foto:</label>
-        <input type="url" id="foto" name="foto" required><br><br>
-
-        <button type="button" onclick="criarLocal()">Criar</button>
-    </form>
-
-    <h2>Editar Local</h2>
-    <form id="formulario-edicao">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required><br><br>
-
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" name="descricao" required></textarea><br><br>
-
-        <label for="foto">Link da Foto:</label>
-        <input type="url" id="foto" name="foto" required><br><br>
-    </form>
+    <h2>Buscar Local</h2>
+    <input type="text" id="busca" placeholder="Buscar local...">
+    <button onclick="buscarLocais()">Buscar</button>
 
     <h2>Locais</h2>
     <div id="locais">
