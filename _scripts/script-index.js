@@ -19,7 +19,7 @@ window.onload = function(){
                         <p>${local.descricao}</p>
                         <div class="btn-local">
                         <button onclick="editarLocal(${local.id})">Editar</button>
-                        <button onclick="excluirLocal(${local.id})">Excluir</button>
+                        <button id="delete" onclick="excluirLocal(${local.id})">Excluir</button>
                         </div>
                     `
                     locaisDiv.appendChild(localDiv)
@@ -48,7 +48,7 @@ function buscarLocais() {
                     <p>${local.descricao}</p>
                     <div class="btn-local">
                     <button onclick="editarLocal(${local.id})">Editar</button>
-                    <button onclick="excluirLocal(${local.id})">Excluir</button>
+                    <button id="delete" onclick="excluirLocal(${local.id})">Excluir</button>
                     </div>
                 `
                 locaisDiv.appendChild(localDiv)
