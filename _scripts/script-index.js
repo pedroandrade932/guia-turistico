@@ -30,6 +30,7 @@ window.onload = function(){
 
 function buscarLocais() {
     let search = document.getElementById("busca").value
+    search = search.toLowerCase()
     fetch('http://localhost:3000/locais')
         .then(response => response.json())
         .then(locais => {
@@ -37,7 +38,8 @@ function buscarLocais() {
             locaisDiv.innerHTML = '' // Limpa a lista de locais
 
             locais.forEach(local => {
-                if (local.titulo.includes(search)){
+                const found = local.titulo.toLowerCase()
+                if (found.includes(search)){
                 const localDiv = document.createElement('div')
                 localDiv.classList.add('local')
                 localDiv.innerHTML = `
