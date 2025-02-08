@@ -158,6 +158,10 @@ nav a {
     padding: 5px 10px; /* Espaçamento interno dos links */
 }
 
+.icon {
+    margin: 0;
+}
+
 a.active {
     color: chartreuse; /* Cor do texto dos links */
     text-decoration: none; /* Remove o sublinhado dos links */
