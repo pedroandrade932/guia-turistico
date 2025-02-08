@@ -38,9 +38,15 @@ function mostrarPreview(){
     const titulo = document.getElementById("titulo").value
     const imgInput = document.getElementById("foto").value
     const previewDiv = document.getElementById("img-preview")
-    previewDiv.innerHTML = `
-        <img src="${imgInput}" alt="${titulo}">
-    `
+    if (imgInput.onload()){
+        previewDiv.innerHTML = `
+            <img src="${imgInput}" alt="${titulo}">
+        `
+    } else {
+        previewDiv.innerHTML = `
+            <img src="_images/system/error404">
+        `
+    }
 }
 
 function salvarEdicao() {
