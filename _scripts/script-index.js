@@ -63,12 +63,15 @@ function editarLocal(id) {
 
 
 function excluirLocal(id) {
-    // Enviar requisição DELETE para excluir o local
-    fetch(`http://localhost:3000/locais/${id}`, {
-        method: 'DELETE'
-    })
-        .then(response => {
-            // Atualizar a lista de locais
-            buscarLocais()
+    // Mensagem de confirmação
+    if(confirm("Deseja excluir permanentemente o local?")){
+        // Enviar requisição DELETE para excluir o local
+        fetch(`http://localhost:3000/locais/${id}`, {
+            method: 'DELETE'
         })
+            .then(response => {
+                // Atualizar a lista de locais
+                buscarLocais()
+            })
+    }
 }
