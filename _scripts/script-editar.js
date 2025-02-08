@@ -38,13 +38,17 @@ function mostrarPreview(){
     const titulo = document.getElementById("titulo").value
     const imgInput = document.getElementById("foto").value
     const previewDiv = document.getElementById("img-preview")
-    if (imgInput.onload()){
+    const img = new Image()
+    img.src = imgInput
+
+    img.onload = function(){
         previewDiv.innerHTML = `
             <img src="${imgInput}" alt="${titulo}">
         `
-    } else {
+    }
+    img.onerror = function(){
         previewDiv.innerHTML = `
-            <img src="_images/system/error404">
+            <img src="_images/system/error404.png">
         `
     }
 }

@@ -54,14 +54,11 @@ label {
 
 div#img-preview {
     margin: 0px auto 50px auto;
-    width: 500px;
-    border-color: #333;
-    border-style: solid;
-    border-spacing: 10px;
+    max-width: 500px;
 }
 
 #img-preview img {
-    max-width: 500px;
+    width: 500px;
 }
 
 input[type="text"],
