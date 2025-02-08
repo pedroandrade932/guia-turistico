@@ -59,6 +59,24 @@
       "titulo": "Serra da Borborema",
       "descricao": "Uma região montanhosa com clima ameno, paisagens exuberantes e cidades históricas.",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Parque_Estadual_da_Pedra_da_Boca_02.jpg/220px-Parque_Estadual_da_Pedra_da_Boca_02.jpg"
+    },
+    {
+      "id": "11",
+      "titulo": "Centro Cultural São Francisco",
+      "descricao": "O Centro Cultural São Francisco é um complexo arquitetônico barroco localizado no centro histórico de João Pessoa, na Paraíba. Ele é um dos monumentos históricos mais importantes do Brasil e um testemunho da época colonial.",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/JoaoPessoa_ConventoSaoFrancisco.JPG/1200px-JoaoPessoa_ConventoSaoFrancisco.JPG"
+    },
+    {
+      "titulo": "Fortaleza de Santa Catarina",
+      "descricao": "A Fortaleza de Santa Catarina, também conhecida como Forte de Santa Catarina do Cabedelo, é um monumento histórico militar da Paraíba. Foi construída pelos portugueses em 1585, em taipa de pilão, e é um testemunho das lutas contra os invasores holandeses. \n",
+      "foto": "https://paraibacriativa.com.br/wp-content/uploads/2016/09/Fortaleza-de-Santa-Catarina_Cabedelo.jpg",
+      "id": "12"
+    },
+    {
+      "id": "13",
+      "titulo": "Pedra do Ingá",
+      "descricao": "A Pedra do Ingá é um monumento arqueológico localizado no município de Ingá, na Paraíba. É um terreno rochoso com inscrições rupestres, chamadas de \"itacoatiaras\", que foram entalhadas há milhares de anos. \n",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Pedra_do_Ing%C3%A1_-_s%C3%ADtio_arqueol%C3%B3gico.jpg/1200px-Pedra_do_Ing%C3%A1_-_s%C3%ADtio_arqueol%C3%B3gico.jpg"
     }
   ]
 }

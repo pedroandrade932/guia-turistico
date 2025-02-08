@@ -158,6 +158,12 @@ nav a {
     padding: 5px 10px; /* Espaçamento interno dos links */
 }
 
+a.active {
+    color: chartreuse; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 5px 10px; /* Espaçamento interno dos links */
+}
+
 nav a:hover {
     background-color: #555; /* Cor de fundo dos links ao passar o mouse */
 }

@@ -9,6 +9,25 @@ window.onload = function(){
         })
 }
 
+function mostrarPreview(){
+    const titulo = document.getElementById("titulo").value
+    const imgInput = document.getElementById("foto").value
+    const previewDiv = document.getElementById("img-preview")
+    const img = new Image()
+    img.src = imgInput
+
+    img.onload = function(){
+        previewDiv.innerHTML = `
+            <img src="${imgInput}" alt="${titulo}">
+        `
+    }
+    img.onerror = function(){
+        previewDiv.innerHTML = `
+            <img src="_images/system/error404.png">
+        `
+    }
+}
+
 
 function criarLocal() {
     // Obter dados do formulário de criação de local
