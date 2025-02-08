@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
+/* Definições globais */
 * {
     padding: 0;
     margin: 0;
 }
 
+/* Padrões gerais */
 body {
     font-family: sans-serif;
     margin: 0;
@@ -42,6 +44,8 @@ label {
     color: #777;
 }
 
+/* Para a edição de locais */
+
 #img-btn {
     margin: 0px auto 30px auto;
     background-color: green;
@@ -61,11 +65,14 @@ div#img-preview {
     width: 500px;
 }
 
+
+/* Para o index */
+
 #delete {
     background-color: tomato;
 }
 
-#cancel-edit:hover {
+#delete:hover {
     background-color: rgb(192, 75, 55);
 }
 
@@ -171,3 +178,5 @@ a.active {
 nav a:hover {
     background-color: #555; /* Cor de fundo dos links ao passar o mouse */
 }
+
+/*  */
