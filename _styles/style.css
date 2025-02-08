@@ -61,6 +61,14 @@ div#img-preview {
     width: 500px;
 }
 
+#cancel-edit {
+    background-color: tomato;
+}
+
+#cancel-edit:hover {
+    background-color: rgb(192, 75, 55);
+}
+
 input[type="text"],
 input[type="url"],
 

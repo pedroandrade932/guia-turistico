@@ -82,3 +82,9 @@ function salvarEdicao() {
         window.location.href = "index.html"
 
 }
+
+function cancelarEdicao() {
+    if(confirm("Descartar edição atual?")){
+        window.location.href = `index.html`
+    }
+}
